@@ -30,7 +30,8 @@ merlot(clos_de_los_siete).
 cabernet_sauvignon(the_pastoralist).
 cabernet_sauvignon(clos_de_los_siete).
 malbec(clos_de_los_siete).
-shiraz(clos_de_los_siete).
+syrah(clos_de_los_siete).
+syrah(whispering_angel_rose).
 petit_verdot(clos_de_los_siete).
 cabernet_franc(clos_de_los_siete).
 pinot_noir(bourgogne_pinot_noir).
@@ -41,8 +42,7 @@ viognier(coteau_de_vernon).
 grenache(malene_rose).
 grenache(whispering_angel_rose).
 rolle(whispering_angel_rose).
-syrah(whispering_angel_rose).
-sinsault(whispering_angel_rose).
+cinsault(whispering_angel_rose).
 tibouren(whispering_angel_rose).
 
 
@@ -184,7 +184,7 @@ grape_chosen(Grape, Wine) :-
 	Grape=:=3 ->  
    	 	malbec(Wine);
 	Grape=:=4 ->  
-    	shiraz(Wine);
+    	syrah(Wine);
     Grape=:=5 ->  
 		petit_verdot(Wine);
     Grape=:=6 ->  
@@ -204,10 +204,8 @@ grape_chosen(Grape, Wine) :-
     Grape=:=13 ->  
 		rolle(Wine);
     Grape=:=14 ->  
-		syrah(Wine);
+		cinsault(Wine);
     Grape=:=15 ->  
-		sinsault(Wine);
-    Grape=:=16 ->  
 		tibouren(Wine);
     Grape=:=0 ->  
     	wine(Wine).
@@ -297,7 +295,7 @@ wineMenu(Wine) :-
     write('1. Merlot'),nl,
     write('2. Cabernet Sauvignon'),nl,
     write('3. Malbec'),nl,
-    write('4. Shiraz'),nl,
+    write('4. Syrah'),nl,
     write('5. Petit Verdot'),nl,
     write('6. Cabernet Franc'),nl,
     write('7. Pinot Noir'),nl,
@@ -307,11 +305,10 @@ wineMenu(Wine) :-
     write('11. Viognier'),nl,
     write('12. Grenache'),nl,
     write('13. Rolle'),nl,
-    write('14. Syrah'),nl,
-    write('15. Sinsault'),nl,
-    write('16. Tibouren'),nl,nl,
+    write('14. Cinsault'),nl,
+    write('15. Tibouren'),nl,nl,
     write('Enter your choice number below:'),nl,
-    read(Grape), Grape>=0, Grape=<16,
+    read(Grape), Grape>=0, Grape=<15,
     nl,
     
     nl,
@@ -320,7 +317,7 @@ wineMenu(Wine) :-
     write('1. Merlot'),nl,
     write('2. Cabernet Sauvignon'),nl,
     write('3. Malbec'),nl,
-    write('4. Shiraz'),nl,
+    write('4. Syrah'),nl,
     write('5. Petit Verdot'),nl,
     write('6. Cabernet Franc'),nl,
     write('7. Pinot Noir'),nl,
@@ -330,11 +327,10 @@ wineMenu(Wine) :-
     write('11. Viognier'),nl,
     write('12. Grenache'),nl,
     write('13. Rolle'),nl,
-    write('14. Syrah'),nl,
-    write('15. Sinsault'),nl,
-    write('16. Tibouren'),nl,nl,
+    write('14. Cinsault'),nl,
+    write('15. Tibouren'),nl,nl,
     write('Enter your choice number below:'),nl,
-    read(Grape_to_exclude), Grape_to_exclude>=0, Grape_to_exclude=<16,
+    read(Grape_to_exclude), Grape_to_exclude>=0, Grape_to_exclude=<15,
     nl,
     
     

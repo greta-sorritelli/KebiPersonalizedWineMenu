@@ -1,0 +1,1600 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" id="definitions" name="Wine Selection" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.8.0">
+  <inputData id="InputData_0qxwut6" name="Country" />
+  <inputData id="InputData_1ao1925" name="Region" />
+  <inputData id="InputData_0ii700h" name="Taste" />
+  <inputData id="InputData_1k9un3k" name="Grape" />
+  <inputData id="InputData_18e89tb" name="Menu" />
+  <decision id="Decision_19kbw19" name="Country preferences">
+    <informationRequirement id="InformationRequirement_1mnhvzb">
+      <requiredInput href="#InputData_0qxwut6" />
+    </informationRequirement>
+    <decisionTable id="DecisionTable_05zb0go" hitPolicy="COLLECT">
+      <input id="InputClause_1e44bcq" label="Country" biodi:width="192">
+        <inputExpression id="LiteralExpression_0oezc1i" typeRef="string">
+          <text>Country</text>
+        </inputExpression>
+        <inputValues id="UnaryTests_0jpt6mh">
+          <text>"Italy","Australia","Argentina","France","United States"</text>
+        </inputValues>
+      </input>
+      <output id="OutputClause_0f9tt3t" label="Recommended Wines on Country" name="winesC" typeRef="string" biodi:width="193">
+        <outputValues id="UnaryTests_0hdzrn5">
+          <text>"Mionetto Prosecco Brut","Fontanafredda Moscato Asti","Masseto","Whispering Angel Rosé","Montrachet Grand Cru","Coteau De Vernon","The Pastoralist","Clos De Los Siete ","Malene Rosé","Bourgogne Pinot Noir"</text>
+        </outputValues>
+      </output>
+      <rule id="DecisionRule_18ry3l0">
+        <description></description>
+        <inputEntry id="UnaryTests_0nkiubq">
+          <text>"Italy"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_184mf1e">
+          <text>"Mionetto Prosecco Brut"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_10c1nzk">
+        <inputEntry id="UnaryTests_0erzqjb">
+          <text>"Italy"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0bmx23u">
+          <text>"Fontanafredda Moscato Asti"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_156312h">
+        <inputEntry id="UnaryTests_0ob7zis">
+          <text>"Italy"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1bn12x5">
+          <text>"Masseto"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_11d7xdd">
+        <description></description>
+        <inputEntry id="UnaryTests_05m47bu">
+          <text>"France"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_02hro5b">
+          <text>"Montrachet Grand Cru"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0ajdm3q">
+        <inputEntry id="UnaryTests_1m05xyp">
+          <text>"France"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_152kw53">
+          <text>"Coteau De Vernon"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0g0kbdo">
+        <inputEntry id="UnaryTests_1q7kqd1">
+          <text>"France"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0qxplnn">
+          <text>"Whispering Angel Rosé"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_04hplpj">
+        <inputEntry id="UnaryTests_0rtl0z0">
+          <text>"France"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1be571y">
+          <text>"Bourgogne Pinot Noir"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0gbytr5">
+        <inputEntry id="UnaryTests_0ebzoey">
+          <text>"Australia"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_08hho96">
+          <text>"The Pastoralist"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_08eopuo">
+        <inputEntry id="UnaryTests_08hnnwa">
+          <text>"Argentina"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0lehx6q">
+          <text>"Clos De Los Siete"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0gdd83f">
+        <inputEntry id="UnaryTests_15meivj">
+          <text>"United States"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_17d0lvx">
+          <text>"Malene Rosé"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0m7n959">
+        <inputEntry id="UnaryTests_0krppx7">
+          <text>""</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_04dwbm8">
+          <text>"Masseto"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_09fltnf">
+        <inputEntry id="UnaryTests_07gq7n8">
+          <text>""</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1ci5r8v">
+          <text>"The Pastoralist"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1bd40fo">
+        <inputEntry id="UnaryTests_054ys5o">
+          <text>""</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0du6qa6">
+          <text>"Clos De Los Siete"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_01a1dr2">
+        <inputEntry id="UnaryTests_1lq3v2e">
+          <text>""</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0oqqm5v">
+          <text>"Bourgogne Pinot Noir"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0rk644f">
+        <inputEntry id="UnaryTests_0fl2w45">
+          <text>""</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1w6bi60">
+          <text>"Fontanafredda Moscato Asti"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1m7jn0a">
+        <inputEntry id="UnaryTests_1igpejs">
+          <text>""</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0utlvw5">
+          <text>"Mionetto Prosecco Brut"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0sxm8i4">
+        <inputEntry id="UnaryTests_0qcq0o8">
+          <text>""</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1byc2q3">
+          <text>"Montrachet Grand Cru"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0vheav4">
+        <inputEntry id="UnaryTests_1031c8j">
+          <text>""</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0xsvsu4">
+          <text>"Coteau De Vernon"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1ppblcz">
+        <inputEntry id="UnaryTests_0qzx0pm">
+          <text>""</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0ituy88">
+          <text>"Malene Rosé"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_00kzqa8">
+        <inputEntry id="UnaryTests_0cpcxhx">
+          <text>""</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0re8nkk">
+          <text>"Whispering Angel Rosé"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_08n6tt1">
+        <inputEntry id="UnaryTests_1w2rk80">
+          <text>not("Italy","France","Australia","Argentina","United States","")</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0vfivxk">
+          <text>""</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <decision id="Decision_1spuxoi" name="Grape preferences">
+    <informationRequirement id="InformationRequirement_1m5e7xf">
+      <requiredInput href="#InputData_1k9un3k" />
+    </informationRequirement>
+    <decisionTable id="DecisionTable_1k22rm8" hitPolicy="COLLECT">
+      <input id="InputClause_1fz7cxz" label="Grape" biodi:width="192">
+        <inputExpression id="LiteralExpression_1ysn6fa" typeRef="string">
+          <text>Grape</text>
+        </inputExpression>
+        <inputValues id="UnaryTests_1f0hi3c">
+          <text>"Merlot","Cabernet Sauvignon","Malbec","Petit Verdot","Cabernet Franc","Pinot Noir","Moscato","Glera","Chardonnay","Viognier","Grenache","Rolle","Syrah","Tibouren","Cinsault"</text>
+        </inputValues>
+      </input>
+      <output id="OutputClause_0mvlx1p" label="Recommende wines on grapes" name="winesG" typeRef="string" biodi:width="192">
+        <outputValues id="UnaryTests_1i3oc8h">
+          <text>"Masseto","The Pastoralist","Clos De Los Siete","Bourgogne Pinot Noir","Fontanafredda Moscato Asti","Mionetto Prosecco Brut","Montrachet Grand Cru","Coteau De Vernon","Malene Rosé","Whispering Angel Rosé"</text>
+        </outputValues>
+      </output>
+      <rule id="DecisionRule_1dl7bxj">
+        <inputEntry id="UnaryTests_1w5ydi4">
+          <text>"Merlot"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_02zep9p">
+          <text>"Masseto"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1619myd">
+        <inputEntry id="UnaryTests_1tkskih">
+          <text>"Cabernet Sauvignon"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1l2aknt">
+          <text>"The Pastoralist"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_11f4ayt">
+        <inputEntry id="UnaryTests_0oy6mj9">
+          <text>"Merlot", "Cabernet Sauvignon", "Malbec","Syrah","Petit Verdot","Cabernet Franc"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0zckhq3">
+          <text>"Clos De Los Siete"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0ozegtd">
+        <inputEntry id="UnaryTests_1vk2rg4">
+          <text>"Pinot Noir"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0api9eh">
+          <text>"Bourgogne Pinot Noir"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1tlclr4">
+        <inputEntry id="UnaryTests_0fqrghk">
+          <text>"Moscato"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0upwoqr">
+          <text>"Fontanafredda Moscato Asti"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_03np1l9">
+        <inputEntry id="UnaryTests_0ebr36e">
+          <text>"Glera"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0gtlbjr">
+          <text>"Mionetto Prosecco Brut"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0hoi488">
+        <inputEntry id="UnaryTests_09d39aw">
+          <text>"Chardonnay"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_16xrg9a">
+          <text>"Montrachet Grand Cru"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1rvrmhv">
+        <inputEntry id="UnaryTests_1ibgdec">
+          <text>"Viognier"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_13w0ba1">
+          <text>"Coteau De Vernon"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1yseyxt">
+        <inputEntry id="UnaryTests_1vdwr3j">
+          <text>"Grenache"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0l5f4ma">
+          <text>"Malene Rosé"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_19po30p">
+        <inputEntry id="UnaryTests_1440cc4">
+          <text>"Grenache","Rolle","Syrah","Cinsault","Tibouren"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1n2einy">
+          <text>"Whispering Angel Rosé"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0mqujbw">
+        <inputEntry id="UnaryTests_0b4thvz">
+          <text>""</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_11nm7xp">
+          <text>"Masseto"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1uildfs">
+        <inputEntry id="UnaryTests_11d006u">
+          <text>""</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_00qlmkt">
+          <text>"The Pastoralist"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1943v9e">
+        <inputEntry id="UnaryTests_0z3tvu9">
+          <text>""</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1dwkv8j">
+          <text>"Clos De Los Siete"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1vqh47e">
+        <inputEntry id="UnaryTests_0uqgd8d">
+          <text>""</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1dpwcsb">
+          <text>"Bourgogne Pinot Noir"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1359cg1">
+        <inputEntry id="UnaryTests_02z5ka1">
+          <text>""</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_10goxl0">
+          <text>"Fontanafredda Moscato Asti"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1eulctx">
+        <inputEntry id="UnaryTests_0h6y6ol">
+          <text>""</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1blm1ve">
+          <text>"Mionetto Prosecco Brut"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0xpmje4">
+        <inputEntry id="UnaryTests_01wz0og">
+          <text>""</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0e8p1wx">
+          <text>"Montrachet Grand Cru"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1vm8nmy">
+        <inputEntry id="UnaryTests_0z4fr9r">
+          <text>""</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0q2ghu9">
+          <text>"Coteau De Vernon"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0x3cpmg">
+        <inputEntry id="UnaryTests_1jj70oc">
+          <text>""</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1yi70zt">
+          <text>"Malene Rosé"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_19r3jce">
+        <inputEntry id="UnaryTests_1eebs15">
+          <text>""</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_13pgp28">
+          <text>"Whispering Angel Rosé"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0gqnku4">
+        <inputEntry id="UnaryTests_1whhe05">
+          <text>not("Merlot", "Cabernet Sauvignon", "Malbec", "Syrah", "Petit Verdot", "Cabernet Franc", "Pinot Noir", "Moscato", "Glera", "Chardonnay", "Viognier", "Grenache", "Rolle", "Cinsault", "Tibouren", "")</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_143ta0q">
+          <text>""</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <decision id="Decision_0jzfxlg" name="Taste preferences">
+    <informationRequirement id="InformationRequirement_1vrr0mx">
+      <requiredInput href="#InputData_0ii700h" />
+    </informationRequirement>
+    <decisionTable id="DecisionTable_1uiu9p1" hitPolicy="COLLECT">
+      <input id="InputClause_071fuc0" label="Taste">
+        <inputExpression id="LiteralExpression_1mwokoj" typeRef="string">
+          <text>Taste</text>
+        </inputExpression>
+        <inputValues id="UnaryTests_0gcuco2">
+          <text>"acid","bitter","sweet","salt","spice"</text>
+        </inputValues>
+      </input>
+      <output id="OutputClause_1n55aiv" label="Recommeded wines on taste" name="winesT" typeRef="string">
+        <outputValues id="UnaryTests_1m4gzc1">
+          <text>"Masseto","The Pastoralist","Clos De Los Siete","Bourgogne Pinot Noir","Fontanafredda Moscato Asti","Mionetto Prosecco Brut","Montrachet Grand Cru","Coteau De Vernon","Malene Rosé","Whispering Angel Rosé"</text>
+        </outputValues>
+      </output>
+      <rule id="DecisionRule_0r43wop">
+        <description></description>
+        <inputEntry id="UnaryTests_18f2mov">
+          <text>"acid"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0kct43y">
+          <text>"Masseto"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1trz58z">
+        <inputEntry id="UnaryTests_1u7mfr7">
+          <text>"acid"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1w2jqdb">
+          <text>"The Pastoralist"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0qkjdub">
+        <inputEntry id="UnaryTests_0pkx01f">
+          <text>"acid"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0twfy13">
+          <text>"Clos De Los Siete"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_15844pa">
+        <inputEntry id="UnaryTests_0kozu9l">
+          <text>"acid"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1n0v7tj">
+          <text>"Bourgogne Pinot Noir"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0f5lggj">
+        <inputEntry id="UnaryTests_0wjcfrt">
+          <text>"acid"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_00gypiu">
+          <text>"Fontanafredda Moscato Asti"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1xv9c5x">
+        <inputEntry id="UnaryTests_15mg4yt">
+          <text>"acid"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0ri00r9">
+          <text>"Mionetto Prosecco Brut"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_06qcd01">
+        <inputEntry id="UnaryTests_0bte83k">
+          <text>"acid"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0pz691v">
+          <text>"Montrachet Grand Cru"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1dgra04">
+        <inputEntry id="UnaryTests_0e5valg">
+          <text>"acid"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_19gd3nk">
+          <text>"Coteau De Vernon"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_068q9or">
+        <inputEntry id="UnaryTests_0zrriue">
+          <text>"acid"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0iu3o9n">
+          <text>"Malene Rosé"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0y2sjgp">
+        <inputEntry id="UnaryTests_0k7bkxo">
+          <text>"acid"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0m19iyq">
+          <text>"Whispering Angel Rosé"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0umczfd">
+        <description></description>
+        <inputEntry id="UnaryTests_0a5vmkk">
+          <text>"bitter"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_05pd65f">
+          <text>"Masseto"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0wkbbi0">
+        <inputEntry id="UnaryTests_1relg4c">
+          <text>"bitter"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_163zmde">
+          <text>"The Pastoralist"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0r6o3u4">
+        <inputEntry id="UnaryTests_0yijejk">
+          <text>"bitter"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1tckuff">
+          <text>"Clos De Los Siete"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0k3t0nc">
+        <inputEntry id="UnaryTests_129kp5e">
+          <text>"bitter"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0wmf56i">
+          <text>"Bourgogne Pinot Noir"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1b1017e">
+        <inputEntry id="UnaryTests_0iblbzy">
+          <text>"bitter"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_10kq3o8">
+          <text>"Montrachet Grand Cru"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1hk0awn">
+        <inputEntry id="UnaryTests_1e5d2go">
+          <text>"bitter"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_19pgibl">
+          <text>"Coteau De Vernon"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_025iwkg">
+        <inputEntry id="UnaryTests_05mubik">
+          <text>"sweet"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0jwy0ju">
+          <text>"Fontanafredda Moscato Asti"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_10hwjwm">
+        <inputEntry id="UnaryTests_0o8hydv">
+          <text>"salt"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_04xhup5">
+          <text>""</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_164lmui">
+        <description></description>
+        <inputEntry id="UnaryTests_1xvrtcm">
+          <text>"spice"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1imum0z">
+          <text>"Masseto"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0okr2pg">
+        <inputEntry id="UnaryTests_0m0eb8w">
+          <text>"spice"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_173ia7l">
+          <text>"The Pastoralist"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1q9xwyc">
+        <inputEntry id="UnaryTests_06m3404">
+          <text>"spice"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1qqgx77">
+          <text>"Clos De Los Siete"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0ycc3fb">
+        <inputEntry id="UnaryTests_1am92na">
+          <text>"spice"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0sspcw5">
+          <text>"Bourgogne Pinot Noir"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0pqb29u">
+        <inputEntry id="UnaryTests_1wvwiot">
+          <text>"spice"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_168n90i">
+          <text>"Mionetto Prosecco Brut"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1217vwl">
+        <inputEntry id="UnaryTests_1rfe8fs">
+          <text>"spice"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_19e51m1">
+          <text>"Montrachet Grand Cru"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1ak5avu">
+        <inputEntry id="UnaryTests_19hi4uw">
+          <text>""</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1c29owj">
+          <text>"Masseto"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0fnj6i3">
+        <inputEntry id="UnaryTests_0zfuwu2">
+          <text>""</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1m01pem">
+          <text>"The Pastoralist"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0ncb1rc">
+        <inputEntry id="UnaryTests_0rzavzn">
+          <text>""</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_00ezyc0">
+          <text>"Clos De Los Siete"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0ju9r3i">
+        <inputEntry id="UnaryTests_025kn4m">
+          <text>""</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_16x5k0g">
+          <text>"Bourgogne Pinot Noir"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0y1tw2q">
+        <inputEntry id="UnaryTests_0khlldx">
+          <text>""</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0pcbbvw">
+          <text>"Fontanafredda Moscato Asti"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_00s5l9s">
+        <inputEntry id="UnaryTests_04g0v14">
+          <text>""</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0ln0tis">
+          <text>"Mionetto Prosecco Brut"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_121jz3x">
+        <inputEntry id="UnaryTests_1xbnelx">
+          <text>""</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1c9k1xv">
+          <text>"Montrachet Grand Cru"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_12vt4k3">
+        <inputEntry id="UnaryTests_1mqvofh">
+          <text>""</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0m00mgk">
+          <text>"Coteau De Vernon"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0zq0oia">
+        <inputEntry id="UnaryTests_0xs7yac">
+          <text>""</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1fcizqn">
+          <text>"Malene Rosé"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0dhra2m">
+        <inputEntry id="UnaryTests_0r2ki02">
+          <text>""</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_130zmr2">
+          <text>"Whispering Angel Rosé"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1rzc02l">
+        <inputEntry id="UnaryTests_0pzsko0">
+          <text>not("acid", "bitter", "spice", "sweet", "salt", "")</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1jxok5g">
+          <text>""</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <decision id="Decision_0yfnbmg" name="Region preferences">
+    <informationRequirement id="InformationRequirement_0xqormc">
+      <requiredInput href="#InputData_1ao1925" />
+    </informationRequirement>
+    <decisionTable id="DecisionTable_1qyj6v2" hitPolicy="COLLECT">
+      <input id="InputClause_01in0hk" label="Region">
+        <inputExpression id="LiteralExpression_0cpm72p" typeRef="string">
+          <text>Region</text>
+        </inputExpression>
+        <inputValues id="UnaryTests_16qib42">
+          <text>"Tuscany","Veneto","Piedmont","Burgundy","Provence","South Australia","California","Mendoza"</text>
+        </inputValues>
+      </input>
+      <output id="OutputClause_1eiolhm" label="Recommended wines on region" name="winesR" typeRef="string" biodi:width="192">
+        <outputValues id="UnaryTests_0uhtsal">
+          <text>"Masseto","The Pastoralist","Clos De Los Siete","Bourgogne Pinot Noir","Fontanafredda Moscato Asti","Mionetto Prosecco Brut","Montrachet Grand Cru","Coteau De Vernon","Malene Rosé","Whispering Angel Rosé"</text>
+        </outputValues>
+      </output>
+      <rule id="DecisionRule_05ummyu">
+        <inputEntry id="UnaryTests_0gmslfn">
+          <text>"Tuscany"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_11nspwe">
+          <text>"Masseto"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1cs88nq">
+        <inputEntry id="UnaryTests_1r36f5j">
+          <text>"Veneto"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0cdzemb">
+          <text>"Mionetto Prosecco Brut"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1lv3bh7">
+        <inputEntry id="UnaryTests_0n532iv">
+          <text>"Piedmont"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1cgv62q">
+          <text>"Fontanafredda Moscato Asti"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1ed087f">
+        <inputEntry id="UnaryTests_065q01a">
+          <text>"Burgundy"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1y2p98m">
+          <text>"Montrachet Grand Cru"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0pil2wv">
+        <inputEntry id="UnaryTests_03dx8s3">
+          <text>"Burgundy"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_14ojebc">
+          <text>"Coteau De Vernon"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1eespbn">
+        <inputEntry id="UnaryTests_1xvqgyr">
+          <text>"Burgundy"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1v3frjv">
+          <text>"Bourgogne Pinot Noir"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1b5r6os">
+        <inputEntry id="UnaryTests_0whegyv">
+          <text>"Provence"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0igdxr6">
+          <text>"Whispering Angel Rosé"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_19dmwi6">
+        <inputEntry id="UnaryTests_1aoryfx">
+          <text>"South Australia"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_19adlib">
+          <text>"The Pastoralist"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1rv563w">
+        <inputEntry id="UnaryTests_0j1872g">
+          <text>"California"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1ofcvnu">
+          <text>"Malene Rosé"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0yrt7ui">
+        <inputEntry id="UnaryTests_0vw0vr5">
+          <text>"Mendoza"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_04anlg9">
+          <text>"Clos De Los Siete"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0y55oep">
+        <inputEntry id="UnaryTests_0ecva41">
+          <text>""</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1sqe5je">
+          <text>"Masseto"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_04qgagh">
+        <inputEntry id="UnaryTests_0k82nwt">
+          <text>""</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_176l743">
+          <text>"The Pastoralist"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1hl89e9">
+        <inputEntry id="UnaryTests_0eo9m5i">
+          <text>""</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_18g80dw">
+          <text>"Clos De Los Siete"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1s3xzf6">
+        <inputEntry id="UnaryTests_0c9rxqn">
+          <text>""</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0sx3nd8">
+          <text>"Bourgogne Pinot Noir"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1o99jje">
+        <inputEntry id="UnaryTests_0ztuyj5">
+          <text>""</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1ufvyg7">
+          <text>"Fontanafredda Moscato Asti"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_12cs7x3">
+        <inputEntry id="UnaryTests_14a9jyy">
+          <text>""</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0rfgykm">
+          <text>"Mionetto Prosecco Brut"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1wr4lx9">
+        <inputEntry id="UnaryTests_05jl336">
+          <text>""</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0tl27qt">
+          <text>"Montrachet Grand Cru"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_04829kg">
+        <inputEntry id="UnaryTests_17vgsm0">
+          <text>""</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0mca10o">
+          <text>"Coteau De Vernon"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0xkepfx">
+        <inputEntry id="UnaryTests_062ia8c">
+          <text>""</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0tpncxz">
+          <text>"Malene Rosé"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0cj73tz">
+        <inputEntry id="UnaryTests_1qk62cu">
+          <text>""</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1agt4in">
+          <text>"Whispering Angel Rosé"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_04j1w9z">
+        <inputEntry id="UnaryTests_0hei5qv">
+          <text>not("Tuscany", "Veneto", "Piedmont", "Burgundy","Provence", "South Australia", "California", "Mendoza", "")</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1jxty5u">
+          <text>""</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <knowledgeSource id="KnowledgeSource_0a5ue09" name="List of wines" />
+  <decision id="Decision_064f0jq" name="Menu meal*">
+    <informationRequirement id="InformationRequirement_0p83eky">
+      <requiredInput href="#InputData_18e89tb" />
+    </informationRequirement>
+    <decisionTable id="DecisionTable_1gkdlrr" hitPolicy="COLLECT">
+      <input id="InputClause_12o1rih" label="Menu*">
+        <inputExpression id="LiteralExpression_0t535yp" typeRef="string">
+          <text>menuMeal</text>
+        </inputExpression>
+        <inputValues id="UnaryTests_1ci8te5">
+          <text>"beef bourguignon","chicken caesar salad","fish and chips","ratatouille","tiramisù","fresh fruit salad"</text>
+        </inputValues>
+      </input>
+      <output id="OutputClause_0dhfuxt" label="Recommended wines on menu" name="winesM" typeRef="string" biodi:width="192">
+        <outputValues id="UnaryTests_19rpxfc">
+          <text>"Masseto","The Pastoralist","Clos De Los Siete","Bourgogne Pinot Noir","Fontanafredda Moscato Asti","Mionetto Prosecco Brut","Montrachet Grand Cru","Coteau De Vernon","Malene Rosé","Whispering Angel Rosé"</text>
+        </outputValues>
+      </output>
+      <rule id="DecisionRule_09i9jfv">
+        <inputEntry id="UnaryTests_1971gzk">
+          <text>"beef bourguignon"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1wl8i1b">
+          <text>"Masseto"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0wio3tz">
+        <inputEntry id="UnaryTests_0bvpi0f">
+          <text>"beef bourguignon"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0cihqlq">
+          <text>"The Pastoralist"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_14oz44e">
+        <inputEntry id="UnaryTests_0qzriqn">
+          <text>"beef bourguignon"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0i2r0ob">
+          <text>"Clos De Los Siete"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1wf8vl9">
+        <inputEntry id="UnaryTests_18l7h8p">
+          <text>"beef bourguignon"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1rfe01e">
+          <text>"Bourgogne Pinot Noir"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0ji628v">
+        <inputEntry id="UnaryTests_08d5oma">
+          <text>"beef bourguignon"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_083d3la">
+          <text>"Malene Rosé"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0l4tiv9">
+        <inputEntry id="UnaryTests_0fs38wt">
+          <text>"beef bourguignon"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1nmh18n">
+          <text>"Whispering Angel Rosé"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0j1alvy">
+        <inputEntry id="UnaryTests_1muifen">
+          <text>"chicken caesar salad"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1o9idh9">
+          <text>"Masseto"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1cp4n04">
+        <inputEntry id="UnaryTests_11go2ys">
+          <text>"chicken caesar salad"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0s1p8tt">
+          <text>"The Pastoralist"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0vie8k9">
+        <inputEntry id="UnaryTests_1ko7nvr">
+          <text>"chicken caesar salad"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1xfatbu">
+          <text>"Clos De Los Siete"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0xnh45e">
+        <inputEntry id="UnaryTests_11wnrfz">
+          <text>"chicken caesar salad"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0izuf99">
+          <text>"Bourgogne Pinot Noir"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0pjkp3s">
+        <inputEntry id="UnaryTests_1svc4li">
+          <text>"chicken caesar salad"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1pfyi0g">
+          <text>"Fontanafredda Moscato Asti"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1mdfb7x">
+        <inputEntry id="UnaryTests_1rd7wm5">
+          <text>"chicken caesar salad"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0u2oopj">
+          <text>"Mionetto Prosecco Brut"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_122vcxd">
+        <inputEntry id="UnaryTests_0hxaj40">
+          <text>"chicken caesar salad"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0dv3m6x">
+          <text>"Montrachet Grand Cru"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1i78yol">
+        <inputEntry id="UnaryTests_079y4n3">
+          <text>"chicken caesar salad"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0p82dzb">
+          <text>"Coteau De Vernon"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_09mvlmr">
+        <inputEntry id="UnaryTests_0p2ca1i">
+          <text>"chicken caesar salad"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1x00mvs">
+          <text>"Malene Rosé"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1rwsfio">
+        <inputEntry id="UnaryTests_0p10b8w">
+          <text>"chicken caesar salad"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1qok4em">
+          <text>"Whispering Angel Rosé"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_103agr0">
+        <inputEntry id="UnaryTests_0tsizr4">
+          <text>"fish and chips"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0g7bpm2">
+          <text>"Masseto"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0l0uy6q">
+        <inputEntry id="UnaryTests_1jv05vb">
+          <text>"fish and chips"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1v88bci">
+          <text>"The Pastoralist"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_16wbsga">
+        <inputEntry id="UnaryTests_1979rut">
+          <text>"fish and chips"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1bwc0tt">
+          <text>"Clos De Los Siete"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0wx4970">
+        <inputEntry id="UnaryTests_1yu3oa5">
+          <text>"fish and chips"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0xf7fn6">
+          <text>"Bourgogne Pinot Noir"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0d3iqh2">
+        <inputEntry id="UnaryTests_0n16wva">
+          <text>"fish and chips"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1czjv1q">
+          <text>"Fontanafredda Moscato Asti"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0enzcpb">
+        <inputEntry id="UnaryTests_1e1hgkr">
+          <text>"fish and chips"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1op6tzb">
+          <text>"Mionetto Prosecco Brut"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1srr6e0">
+        <inputEntry id="UnaryTests_0uvh8ja">
+          <text>"fish and chips"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0bzy87m">
+          <text>"Montrachet Grand Cru"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_15azjjr">
+        <inputEntry id="UnaryTests_1mx0qx6">
+          <text>"fish and chips"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_01m3pyx">
+          <text>"Coteau De Vernon"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0mu8rf6">
+        <inputEntry id="UnaryTests_1d8mtip">
+          <text>"fish and chips"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1qf52np">
+          <text>"Malene Rosé"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_14q5nlz">
+        <inputEntry id="UnaryTests_1fi1zrj">
+          <text>"fish and chips"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_09601m5">
+          <text>"Whispering Angel Rosé"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1pd4a80">
+        <inputEntry id="UnaryTests_09ci8ve">
+          <text>"ratatouille"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_04qcw2n">
+          <text>"Masseto"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_01pgux7">
+        <inputEntry id="UnaryTests_0nz3rfz">
+          <text>"ratatouille"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0jvku8b">
+          <text>"The Pastoralist"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_152mt41">
+        <inputEntry id="UnaryTests_1gha36m">
+          <text>"ratatouille"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0gzxnsl">
+          <text>"Clos De Los Siete"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0y2nwzl">
+        <inputEntry id="UnaryTests_0sxrh0q">
+          <text>"ratatouille"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1nc32z9">
+          <text>"Bourgogne Pinot Noir"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1otxobq">
+        <inputEntry id="UnaryTests_0ifdhsl">
+          <text>"ratatouille"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0dwg6ed">
+          <text>"Fontanafredda Moscato Asti"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0ourmcm">
+        <inputEntry id="UnaryTests_0czqwp6">
+          <text>"ratatouille"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1kmcbez">
+          <text>"Mionetto Prosecco Brut"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1yn7tev">
+        <inputEntry id="UnaryTests_0vg604c">
+          <text>"ratatouille"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0hpau48">
+          <text>"Montrachet Grand Cru"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0kfv36m">
+        <inputEntry id="UnaryTests_0c9fehv">
+          <text>"ratatouille"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0anakp6">
+          <text>"Coteau De Vernon"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0kz49x6">
+        <inputEntry id="UnaryTests_1yebjle">
+          <text>"ratatouille"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0qwnzvj">
+          <text>"Malene Rosé"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_19frlq2">
+        <inputEntry id="UnaryTests_10vbqzo">
+          <text>"ratatouille"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0zu4v4c">
+          <text>"Whispering Angel Rosé"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_14tq4py">
+        <inputEntry id="UnaryTests_1uo8o3w">
+          <text>"tiramisu"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1x4li1w">
+          <text>"Mionetto Prosecco Brut"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_109u40c">
+        <inputEntry id="UnaryTests_0p0wfim">
+          <text>"tiramisu"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_145wgvs">
+          <text>"Whispering Angel Rosé"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_01o9qsk">
+        <inputEntry id="UnaryTests_1n866dh">
+          <text>"fresh fruit salad"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1566pdi">
+          <text>"Fontanafredda Moscato Asti"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0r8iv4y">
+        <inputEntry id="UnaryTests_0ykip79">
+          <text>"fresh fruit salad"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_002mlr8">
+          <text>"Mionetto Prosecco Brut"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1usky3b">
+        <inputEntry id="UnaryTests_0m0bd5d">
+          <text>"fresh fruit salad"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0bvb5i6">
+          <text>"Montrachet Grand Cru"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1lz4yrc">
+        <inputEntry id="UnaryTests_02fpcvv">
+          <text>"fresh fruit salad"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0wpk3qi">
+          <text>"Malene Rosé"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_04ufjgy">
+        <inputEntry id="UnaryTests_1ifdkiz">
+          <text>"fresh fruit salad"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_07dtzpp">
+          <text>"Whispering Angel Rosé"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1alxi2z">
+        <inputEntry id="UnaryTests_1jcwadw">
+          <text>not("beef bourguignon", "chicken caesar salad", "fish and chips", "ratatouille", "tiramisu", "fresh fruit salad", "")</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_06bd0l4">
+          <text>""</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0dy2gu7">
+        <inputEntry id="UnaryTests_1fod1fg">
+          <text>""</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0ex0s2u">
+          <text>""</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <decision id="Decision_10t99wp" name="Wine selection">
+    <informationRequirement id="InformationRequirement_0r546oq">
+      <requiredDecision href="#Decision_19kbw19" />
+    </informationRequirement>
+    <informationRequirement id="InformationRequirement_0fe1tse">
+      <requiredDecision href="#Decision_0jzfxlg" />
+    </informationRequirement>
+    <informationRequirement id="InformationRequirement_02etl3b">
+      <requiredDecision href="#Decision_0yfnbmg" />
+    </informationRequirement>
+    <informationRequirement id="InformationRequirement_0qlt487">
+      <requiredDecision href="#Decision_1spuxoi" />
+    </informationRequirement>
+    <informationRequirement id="InformationRequirement_19fompa">
+      <requiredDecision href="#Decision_064f0jq" />
+    </informationRequirement>
+    <authorityRequirement id="AuthorityRequirement_1cd0hpl">
+      <requiredAuthority href="#KnowledgeSource_0a5ue09" />
+    </authorityRequirement>
+    <decisionTable id="DecisionTable_0r7h6gt" hitPolicy="COLLECT">
+      <input id="InputClause_0aah3wz" label="Country" biodi:width="190">
+        <inputExpression id="LiteralExpression_04qcdix" typeRef="string">
+          <text>winesC</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_03lx5v2" label="Region">
+        <inputExpression id="LiteralExpression_0ajw3e7" typeRef="string">
+          <text>winesR</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_1vmur76" label="Taste">
+        <inputExpression id="LiteralExpression_0h6myxi" typeRef="string">
+          <text>winesT</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_1l1x1uz" label="Grape" biodi:width="192">
+        <inputExpression id="LiteralExpression_1qk6rsm" typeRef="string">
+          <text>winesG</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_0o13j1x" label="Menu" biodi:width="192">
+        <inputExpression id="LiteralExpression_0733t6y" typeRef="string" expressionLanguage="feel">
+          <text>winesM</text>
+        </inputExpression>
+      </input>
+      <output id="OutputClause_1em869i" label="Recommened Wines" name="wines" typeRef="string" biodi:width="192" />
+      <rule id="DecisionRule_1oimujg">
+        <inputEntry id="UnaryTests_0p1ix2d">
+          <text>list contains(winesC, "Masseto")</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0fxib9r">
+          <text>list contains(winesR, "Masseto")</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1jy8i7n">
+          <text>list contains(winesT,"Masseto")</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1k80hvo">
+          <text>list contains(winesG,"Masseto")</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0nwvera">
+          <text>list contains(winesM,"Masseto")</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0u5e8s8">
+          <text>"Masseto"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0wlx3uf">
+        <inputEntry id="UnaryTests_1xw5vki">
+          <text>list contains(winesC, "The Pastoralist")</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1p89vgq">
+          <text>list contains(winesR, "The Pastoralist")</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0luwe2q">
+          <text>list contains(winesT, "The Pastoralist")</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1se5hyg">
+          <text>list contains(winesG, "The Pastoralist")</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_038pfdo">
+          <text>list contains(winesM, "The Pastoralist")</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1dbolni">
+          <text>"The Pastoralist"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1j60383">
+        <inputEntry id="UnaryTests_0powuko">
+          <text>list contains(winesC, "Clos De Los Siete")</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0d4qtdw">
+          <text>list contains(winesR, "Clos De Los Siete")</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0rzkjum">
+          <text>list contains(winesT, "Clos De Los Siete")</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_02g2z26">
+          <text>list contains(winesG, "Clos De Los Siete")</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_08itde9">
+          <text>list contains(winesM, "Clos De Los Siete")</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1tnj3jx">
+          <text>"Clos De Los Siete"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_06ico7b">
+        <inputEntry id="UnaryTests_1erydrd">
+          <text>list contains(winesC, "Bourgogne Pinot Noir")</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1o0zwku">
+          <text>list contains(winesR, "Bourgogne Pinot Noir")</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0n9uivg">
+          <text>list contains(winesT, "Bourgogne Pinot Noir")</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_11s44b7">
+          <text>list contains(winesG, "Bourgogne Pinot Noir")</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1f1f5oy">
+          <text>list contains(winesM, "Bourgogne Pinot Noir")</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_18w3is2">
+          <text>"Bourgogne Pinot Noir"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_19437i9">
+        <inputEntry id="UnaryTests_02eki9i">
+          <text>list contains(winesC, "Fontanafredda Moscato Asti")</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0pwuy22">
+          <text>list contains(winesR, "Fontanafredda Moscato Asti")</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1spxc7j">
+          <text>list contains(winesT, "Fontanafredda Moscato Asti")</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_097gkif">
+          <text>list contains(winesG, "Fontanafredda Moscato Asti")</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_17z38uf">
+          <text>list contains(winesM, "Fontanafredda Moscato Asti")</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0ny5guc">
+          <text>"Fontanafredda Moscato Asti"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1g8bveo">
+        <inputEntry id="UnaryTests_0ifcvha">
+          <text>list contains(winesC, "Mionetto Prosecco Brut")</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1qpq4ks">
+          <text>list contains(winesR, "Mionetto Prosecco Brut")</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0e487oh">
+          <text>list contains(winesT, "Mionetto Prosecco Brut")</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1vvywxa">
+          <text>list contains(winesG, "Mionetto Prosecco Brut")</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_06gxjl4">
+          <text>list contains(winesM, "Mionetto Prosecco Brut")</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1ssaeo9">
+          <text>"Mionetto Prosecco Brut"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0ua5wow">
+        <inputEntry id="UnaryTests_0ujeclh">
+          <text>list contains(winesC, "Montrachet Grand Cru")</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0zv94rd">
+          <text>list contains(winesR, "Montrachet Grand Cru")</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1vdrtjf">
+          <text>list contains(winesT, "Montrachet Grand Cru")</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1i9m19h">
+          <text>list contains(winesG, "Montrachet Grand Cru")</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0w5zirc">
+          <text>list contains(winesM, "Montrachet Grand Cru")</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1yvxmfh">
+          <text>"Montrachet Grand Cru"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_03efqa4">
+        <inputEntry id="UnaryTests_0749ka9">
+          <text>list contains(winesC, "Coteau De Vernon")</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0p7w31h">
+          <text>list contains(winesR, "Coteau De Vernon")</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0kf9aea">
+          <text>list contains(winesT, "Coteau De Vernon")</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_09myr05">
+          <text>list contains(winesG, "Coteau De Vernon")</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0wxzczf">
+          <text>list contains(winesM, "Coteau De Vernon")</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0tx3dhm">
+          <text>"Coteau De Vernon"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_04b013e">
+        <inputEntry id="UnaryTests_0ha20uf">
+          <text>list contains(winesC, "Malene Rosé")</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1tlmlyr">
+          <text>list contains(winesR, "Malene Rosé")</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_04ewol3">
+          <text>list contains(winesT, "Malene Rosé")</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ixcw4f">
+          <text>list contains(winesG, "Malene Rosé")</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_031j0pc">
+          <text>list contains(winesM, "Malene Rosé")</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_14lueh6">
+          <text>"Malene Rosé"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1wzh91n">
+        <inputEntry id="UnaryTests_0upao9l">
+          <text>list contains(winesC, "Whispering Angel Rosé")</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1j3emgx">
+          <text>list contains(winesR, "Whispering Angel Rosé")</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_19l4mzq">
+          <text>list contains(winesT, "Whispering Angel Rosé")</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_169bx0e">
+          <text>list contains(winesG, "Whispering Angel Rosé")</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1do6rmk">
+          <text>list contains(winesM, "Whispering Angel Rosé")</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0ta9ibp">
+          <text>"Whispering Angel Rosé"</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram id="DMNDiagram_19hfzlx">
+      <dmndi:DMNShape id="DMNShape_00k1nd0" dmnElementRef="InputData_0qxwut6">
+        <dc:Bounds height="45" width="125" x="187" y="487" />
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="DMNShape_1cxr3no" dmnElementRef="InputData_1ao1925">
+        <dc:Bounds height="45" width="125" x="437" y="487" />
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="DMNShape_1w2x0tq" dmnElementRef="InputData_0ii700h">
+        <dc:Bounds height="45" width="125" x="677" y="487" />
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="DMNShape_0kq41rn" dmnElementRef="InputData_1k9un3k">
+        <dc:Bounds height="45" width="125" x="917" y="487" />
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="DMNShape_18nn4yg" dmnElementRef="InputData_18e89tb">
+        <dc:Bounds height="45" width="125" x="1157" y="487" />
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="DMNEdge_0gc1r6r" dmnElementRef="InformationRequirement_0r546oq">
+        <di:waypoint x="250" y="320" />
+        <di:waypoint x="680" y="220" />
+        <di:waypoint x="680" y="200" />
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="DMNEdge_0e4gixv" dmnElementRef="InformationRequirement_0fe1tse">
+        <di:waypoint x="740" y="320" />
+        <di:waypoint x="740" y="220" />
+        <di:waypoint x="740" y="200" />
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="DMNEdge_0siwt8o" dmnElementRef="InformationRequirement_1vrr0mx">
+        <di:waypoint x="740" y="487" />
+        <di:waypoint x="740" y="420" />
+        <di:waypoint x="740" y="400" />
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="DMNEdge_1u538t3" dmnElementRef="InformationRequirement_1mnhvzb">
+        <di:waypoint x="250" y="487" />
+        <di:waypoint x="250" y="420" />
+        <di:waypoint x="250" y="400" />
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="DMNEdge_0jom2zb" dmnElementRef="InformationRequirement_0xqormc">
+        <di:waypoint x="500" y="487" />
+        <di:waypoint x="500" y="420" />
+        <di:waypoint x="500" y="400" />
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="DMNEdge_0shbkxi" dmnElementRef="InformationRequirement_1m5e7xf">
+        <di:waypoint x="980" y="487" />
+        <di:waypoint x="980" y="420" />
+        <di:waypoint x="980" y="400" />
+      </dmndi:DMNEdge>
+      <dmndi:DMNShape id="DMNShape_1dtjdma" dmnElementRef="Decision_19kbw19">
+        <dc:Bounds height="80" width="180" x="160" y="320" />
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="DMNShape_06fnb28" dmnElementRef="Decision_1spuxoi">
+        <dc:Bounds height="80" width="180" x="890" y="320" />
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="DMNShape_0b9pmou" dmnElementRef="Decision_0jzfxlg">
+        <dc:Bounds height="80" width="180" x="650" y="320" />
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="DMNEdge_0tyr2dy" dmnElementRef="InformationRequirement_02etl3b">
+        <di:waypoint x="500" y="320" />
+        <di:waypoint x="710" y="220" />
+        <di:waypoint x="710" y="200" />
+      </dmndi:DMNEdge>
+      <dmndi:DMNShape id="DMNShape_0mj7075" dmnElementRef="Decision_0yfnbmg">
+        <dc:Bounds height="80" width="180" x="410" y="320" />
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="DMNEdge_0renu4s" dmnElementRef="InformationRequirement_0qlt487">
+        <di:waypoint x="980" y="320" />
+        <di:waypoint x="770" y="220" />
+        <di:waypoint x="770" y="200" />
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="DMNEdge_17a4nwh" dmnElementRef="InformationRequirement_0p83eky">
+        <di:waypoint x="1220" y="487" />
+        <di:waypoint x="1220" y="420" />
+        <di:waypoint x="1220" y="400" />
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="DMNEdge_0qw4p7k" dmnElementRef="InformationRequirement_19fompa">
+        <di:waypoint x="1220" y="320" />
+        <di:waypoint x="800" y="220" />
+        <di:waypoint x="800" y="200" />
+      </dmndi:DMNEdge>
+      <dmndi:DMNShape id="DMNShape_19znqh0" dmnElementRef="KnowledgeSource_0a5ue09">
+        <dc:Bounds height="63" width="100" x="390" y="128" />
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="DMNEdge_1dnvibq" dmnElementRef="AuthorityRequirement_1cd0hpl">
+        <di:waypoint x="490" y="160" />
+        <di:waypoint x="650" y="160" />
+      </dmndi:DMNEdge>
+      <dmndi:DMNShape id="DMNShape_0ubjv1f" dmnElementRef="Decision_064f0jq">
+        <dc:Bounds height="80" width="180" x="1130" y="320" />
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="DMNShape_07ca4lg" dmnElementRef="Decision_10t99wp">
+        <dc:Bounds height="80" width="180" x="650" y="120" />
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>

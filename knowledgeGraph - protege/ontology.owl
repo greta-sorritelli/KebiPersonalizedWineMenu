@@ -1,0 +1,1324 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/greta/ontologies/2023/5/wineMenu"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/greta/ontologies/2023/5/wineMenu">
+    <Prefix name="" IRI="http://www.semanticweb.org/greta/ontologies/2023/5/wineMenu/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="wineMenu" IRI="http://www.semanticweb.org/greta/ontologies/2023/5/wineMenu#"/>
+    <Declaration>
+        <Class IRI="#country"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#grape"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#meal"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#region"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#taste"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#wine"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#comes_from"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#is_made_of"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#is_part_of"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#pairs_with"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#country_name"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#grape_name"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#has_id"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#meal_name"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#region_name"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#taste_name"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#wine_name"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Acid"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Argentina"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Australia"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Beef_Bourguignon"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Bitter"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Bourgogne_Pinot_Noir"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Burgundy"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Cabernet_Franc"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Cabernet_Sauvignon"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#California"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Chardonnay"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Chicken_Caesar_Salad"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Cinsault"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Clos_De_Los_Siete"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Coteau_De_Vernon"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Fish_and_Chips"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Fontanafredda_Moscato_Asti"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#France"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Fresh_Fruit_Salad"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Glera"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Grenache"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Italy"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Malbec"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Malene_Rose"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Masseto"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Mendoza"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Merlot"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Mionetto_Prosecco_Brut"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Montrachet_Grand_Cru"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Moscato"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Petit_Verdot"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Piedmont"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Pinot_Noir"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Provence"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Ratatouille"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Rolle"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Salt"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#South_Australia"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Spice"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Sweet"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Syrah"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#The_Pastoralist"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Tibouren"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Tiramisu"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Tuscany"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#United_States"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Veneto"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Viognier"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Whispering_Angel_Rose"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class IRI="#taste"/>
+        <NamedIndividual IRI="#Acid"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#country"/>
+        <NamedIndividual IRI="#Argentina"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#country"/>
+        <NamedIndividual IRI="#Australia"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#meal"/>
+        <NamedIndividual IRI="#Beef_Bourguignon"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#taste"/>
+        <NamedIndividual IRI="#Bitter"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#wine"/>
+        <NamedIndividual IRI="#Bourgogne_Pinot_Noir"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#region"/>
+        <NamedIndividual IRI="#Burgundy"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#grape"/>
+        <NamedIndividual IRI="#Cabernet_Franc"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#grape"/>
+        <NamedIndividual IRI="#Cabernet_Sauvignon"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#region"/>
+        <NamedIndividual IRI="#California"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#grape"/>
+        <NamedIndividual IRI="#Chardonnay"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#meal"/>
+        <NamedIndividual IRI="#Chicken_Caesar_Salad"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#grape"/>
+        <NamedIndividual IRI="#Cinsault"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#wine"/>
+        <NamedIndividual IRI="#Clos_De_Los_Siete"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#wine"/>
+        <NamedIndividual IRI="#Coteau_De_Vernon"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#meal"/>
+        <NamedIndividual IRI="#Fish_and_Chips"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#wine"/>
+        <NamedIndividual IRI="#Fontanafredda_Moscato_Asti"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#country"/>
+        <NamedIndividual IRI="#France"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#meal"/>
+        <NamedIndividual IRI="#Fresh_Fruit_Salad"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#grape"/>
+        <NamedIndividual IRI="#Glera"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#grape"/>
+        <NamedIndividual IRI="#Grenache"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#country"/>
+        <NamedIndividual IRI="#Italy"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#grape"/>
+        <NamedIndividual IRI="#Malbec"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#wine"/>
+        <NamedIndividual IRI="#Malene_Rose"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#wine"/>
+        <NamedIndividual IRI="#Masseto"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#region"/>
+        <NamedIndividual IRI="#Mendoza"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#grape"/>
+        <NamedIndividual IRI="#Merlot"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#wine"/>
+        <NamedIndividual IRI="#Mionetto_Prosecco_Brut"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#wine"/>
+        <NamedIndividual IRI="#Montrachet_Grand_Cru"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#grape"/>
+        <NamedIndividual IRI="#Moscato"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#grape"/>
+        <NamedIndividual IRI="#Petit_Verdot"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#region"/>
+        <NamedIndividual IRI="#Piedmont"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#grape"/>
+        <NamedIndividual IRI="#Pinot_Noir"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#region"/>
+        <NamedIndividual IRI="#Provence"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#meal"/>
+        <NamedIndividual IRI="#Ratatouille"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#grape"/>
+        <NamedIndividual IRI="#Rolle"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#taste"/>
+        <NamedIndividual IRI="#Salt"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#region"/>
+        <NamedIndividual IRI="#South_Australia"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#taste"/>
+        <NamedIndividual IRI="#Spice"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#taste"/>
+        <NamedIndividual IRI="#Sweet"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#grape"/>
+        <NamedIndividual IRI="#Syrah"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#wine"/>
+        <NamedIndividual IRI="#The_Pastoralist"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#grape"/>
+        <NamedIndividual IRI="#Tibouren"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#meal"/>
+        <NamedIndividual IRI="#Tiramisu"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#region"/>
+        <NamedIndividual IRI="#Tuscany"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#country"/>
+        <NamedIndividual IRI="#United_States"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#region"/>
+        <NamedIndividual IRI="#Veneto"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#grape"/>
+        <NamedIndividual IRI="#Viognier"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#wine"/>
+        <NamedIndividual IRI="#Whispering_Angel_Rose"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#comes_from"/>
+        <NamedIndividual IRI="#Bourgogne_Pinot_Noir"/>
+        <NamedIndividual IRI="#Burgundy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has"/>
+        <NamedIndividual IRI="#Bourgogne_Pinot_Noir"/>
+        <NamedIndividual IRI="#Acid"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has"/>
+        <NamedIndividual IRI="#Bourgogne_Pinot_Noir"/>
+        <NamedIndividual IRI="#Bitter"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has"/>
+        <NamedIndividual IRI="#Bourgogne_Pinot_Noir"/>
+        <NamedIndividual IRI="#Spice"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#is_made_of"/>
+        <NamedIndividual IRI="#Bourgogne_Pinot_Noir"/>
+        <NamedIndividual IRI="#Pinot_Noir"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#pairs_with"/>
+        <NamedIndividual IRI="#Bourgogne_Pinot_Noir"/>
+        <NamedIndividual IRI="#Beef_Bourguignon"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#pairs_with"/>
+        <NamedIndividual IRI="#Bourgogne_Pinot_Noir"/>
+        <NamedIndividual IRI="#Chicken_Caesar_Salad"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#pairs_with"/>
+        <NamedIndividual IRI="#Bourgogne_Pinot_Noir"/>
+        <NamedIndividual IRI="#Fish_and_Chips"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#pairs_with"/>
+        <NamedIndividual IRI="#Bourgogne_Pinot_Noir"/>
+        <NamedIndividual IRI="#Ratatouille"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#is_part_of"/>
+        <NamedIndividual IRI="#Burgundy"/>
+        <NamedIndividual IRI="#France"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#is_part_of"/>
+        <NamedIndividual IRI="#California"/>
+        <NamedIndividual IRI="#United_States"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#comes_from"/>
+        <NamedIndividual IRI="#Clos_De_Los_Siete"/>
+        <NamedIndividual IRI="#Mendoza"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has"/>
+        <NamedIndividual IRI="#Clos_De_Los_Siete"/>
+        <NamedIndividual IRI="#Acid"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has"/>
+        <NamedIndividual IRI="#Clos_De_Los_Siete"/>
+        <NamedIndividual IRI="#Bitter"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has"/>
+        <NamedIndividual IRI="#Clos_De_Los_Siete"/>
+        <NamedIndividual IRI="#Spice"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#is_made_of"/>
+        <NamedIndividual IRI="#Clos_De_Los_Siete"/>
+        <NamedIndividual IRI="#Cabernet_Franc"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#is_made_of"/>
+        <NamedIndividual IRI="#Clos_De_Los_Siete"/>
+        <NamedIndividual IRI="#Cabernet_Sauvignon"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#is_made_of"/>
+        <NamedIndividual IRI="#Clos_De_Los_Siete"/>
+        <NamedIndividual IRI="#Malbec"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#is_made_of"/>
+        <NamedIndividual IRI="#Clos_De_Los_Siete"/>
+        <NamedIndividual IRI="#Merlot"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#is_made_of"/>
+        <NamedIndividual IRI="#Clos_De_Los_Siete"/>
+        <NamedIndividual IRI="#Petit_Verdot"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#is_made_of"/>
+        <NamedIndividual IRI="#Clos_De_Los_Siete"/>
+        <NamedIndividual IRI="#Syrah"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#pairs_with"/>
+        <NamedIndividual IRI="#Clos_De_Los_Siete"/>
+        <NamedIndividual IRI="#Beef_Bourguignon"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#pairs_with"/>
+        <NamedIndividual IRI="#Clos_De_Los_Siete"/>
+        <NamedIndividual IRI="#Chicken_Caesar_Salad"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#pairs_with"/>
+        <NamedIndividual IRI="#Clos_De_Los_Siete"/>
+        <NamedIndividual IRI="#Fish_and_Chips"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#pairs_with"/>
+        <NamedIndividual IRI="#Clos_De_Los_Siete"/>
+        <NamedIndividual IRI="#Ratatouille"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#comes_from"/>
+        <NamedIndividual IRI="#Coteau_De_Vernon"/>
+        <NamedIndividual IRI="#Burgundy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has"/>
+        <NamedIndividual IRI="#Coteau_De_Vernon"/>
+        <NamedIndividual IRI="#Acid"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has"/>
+        <NamedIndividual IRI="#Coteau_De_Vernon"/>
+        <NamedIndividual IRI="#Bitter"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#is_made_of"/>
+        <NamedIndividual IRI="#Coteau_De_Vernon"/>
+        <NamedIndividual IRI="#Viognier"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#pairs_with"/>
+        <NamedIndividual IRI="#Coteau_De_Vernon"/>
+        <NamedIndividual IRI="#Chicken_Caesar_Salad"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#pairs_with"/>
+        <NamedIndividual IRI="#Coteau_De_Vernon"/>
+        <NamedIndividual IRI="#Fish_and_Chips"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#pairs_with"/>
+        <NamedIndividual IRI="#Coteau_De_Vernon"/>
+        <NamedIndividual IRI="#Ratatouille"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#comes_from"/>
+        <NamedIndividual IRI="#Fontanafredda_Moscato_Asti"/>
+        <NamedIndividual IRI="#Piedmont"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has"/>
+        <NamedIndividual IRI="#Fontanafredda_Moscato_Asti"/>
+        <NamedIndividual IRI="#Acid"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has"/>
+        <NamedIndividual IRI="#Fontanafredda_Moscato_Asti"/>
+        <NamedIndividual IRI="#Sweet"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#is_made_of"/>
+        <NamedIndividual IRI="#Fontanafredda_Moscato_Asti"/>
+        <NamedIndividual IRI="#Moscato"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#pairs_with"/>
+        <NamedIndividual IRI="#Fontanafredda_Moscato_Asti"/>
+        <NamedIndividual IRI="#Chicken_Caesar_Salad"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#pairs_with"/>
+        <NamedIndividual IRI="#Fontanafredda_Moscato_Asti"/>
+        <NamedIndividual IRI="#Fish_and_Chips"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#pairs_with"/>
+        <NamedIndividual IRI="#Fontanafredda_Moscato_Asti"/>
+        <NamedIndividual IRI="#Fresh_Fruit_Salad"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#pairs_with"/>
+        <NamedIndividual IRI="#Fontanafredda_Moscato_Asti"/>
+        <NamedIndividual IRI="#Ratatouille"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#comes_from"/>
+        <NamedIndividual IRI="#Malene_Rose"/>
+        <NamedIndividual IRI="#California"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has"/>
+        <NamedIndividual IRI="#Malene_Rose"/>
+        <NamedIndividual IRI="#Acid"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#is_made_of"/>
+        <NamedIndividual IRI="#Malene_Rose"/>
+        <NamedIndividual IRI="#Grenache"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#pairs_with"/>
+        <NamedIndividual IRI="#Malene_Rose"/>
+        <NamedIndividual IRI="#Beef_Bourguignon"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#pairs_with"/>
+        <NamedIndividual IRI="#Malene_Rose"/>
+        <NamedIndividual IRI="#Chicken_Caesar_Salad"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#pairs_with"/>
+        <NamedIndividual IRI="#Malene_Rose"/>
+        <NamedIndividual IRI="#Fish_and_Chips"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#pairs_with"/>
+        <NamedIndividual IRI="#Malene_Rose"/>
+        <NamedIndividual IRI="#Fresh_Fruit_Salad"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#pairs_with"/>
+        <NamedIndividual IRI="#Malene_Rose"/>
+        <NamedIndividual IRI="#Ratatouille"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#comes_from"/>
+        <NamedIndividual IRI="#Masseto"/>
+        <NamedIndividual IRI="#Tuscany"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has"/>
+        <NamedIndividual IRI="#Masseto"/>
+        <NamedIndividual IRI="#Acid"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has"/>
+        <NamedIndividual IRI="#Masseto"/>
+        <NamedIndividual IRI="#Bitter"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has"/>
+        <NamedIndividual IRI="#Masseto"/>
+        <NamedIndividual IRI="#Spice"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#is_made_of"/>
+        <NamedIndividual IRI="#Masseto"/>
+        <NamedIndividual IRI="#Merlot"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#pairs_with"/>
+        <NamedIndividual IRI="#Masseto"/>
+        <NamedIndividual IRI="#Beef_Bourguignon"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#pairs_with"/>
+        <NamedIndividual IRI="#Masseto"/>
+        <NamedIndividual IRI="#Chicken_Caesar_Salad"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#pairs_with"/>
+        <NamedIndividual IRI="#Masseto"/>
+        <NamedIndividual IRI="#Fish_and_Chips"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#pairs_with"/>
+        <NamedIndividual IRI="#Masseto"/>
+        <NamedIndividual IRI="#Ratatouille"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#is_part_of"/>
+        <NamedIndividual IRI="#Mendoza"/>
+        <NamedIndividual IRI="#Argentina"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#comes_from"/>
+        <NamedIndividual IRI="#Mionetto_Prosecco_Brut"/>
+        <NamedIndividual IRI="#Veneto"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has"/>
+        <NamedIndividual IRI="#Mionetto_Prosecco_Brut"/>
+        <NamedIndividual IRI="#Acid"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has"/>
+        <NamedIndividual IRI="#Mionetto_Prosecco_Brut"/>
+        <NamedIndividual IRI="#Spice"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#is_made_of"/>
+        <NamedIndividual IRI="#Mionetto_Prosecco_Brut"/>
+        <NamedIndividual IRI="#Glera"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#pairs_with"/>
+        <NamedIndividual IRI="#Mionetto_Prosecco_Brut"/>
+        <NamedIndividual IRI="#Chicken_Caesar_Salad"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#pairs_with"/>
+        <NamedIndividual IRI="#Mionetto_Prosecco_Brut"/>
+        <NamedIndividual IRI="#Fish_and_Chips"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#pairs_with"/>
+        <NamedIndividual IRI="#Mionetto_Prosecco_Brut"/>
+        <NamedIndividual IRI="#Fresh_Fruit_Salad"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#pairs_with"/>
+        <NamedIndividual IRI="#Mionetto_Prosecco_Brut"/>
+        <NamedIndividual IRI="#Ratatouille"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#pairs_with"/>
+        <NamedIndividual IRI="#Mionetto_Prosecco_Brut"/>
+        <NamedIndividual IRI="#Tiramisu"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#comes_from"/>
+        <NamedIndividual IRI="#Montrachet_Grand_Cru"/>
+        <NamedIndividual IRI="#Burgundy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has"/>
+        <NamedIndividual IRI="#Montrachet_Grand_Cru"/>
+        <NamedIndividual IRI="#Acid"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has"/>
+        <NamedIndividual IRI="#Montrachet_Grand_Cru"/>
+        <NamedIndividual IRI="#Bitter"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has"/>
+        <NamedIndividual IRI="#Montrachet_Grand_Cru"/>
+        <NamedIndividual IRI="#Spice"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#is_made_of"/>
+        <NamedIndividual IRI="#Montrachet_Grand_Cru"/>
+        <NamedIndividual IRI="#Chardonnay"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#pairs_with"/>
+        <NamedIndividual IRI="#Montrachet_Grand_Cru"/>
+        <NamedIndividual IRI="#Chicken_Caesar_Salad"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#pairs_with"/>
+        <NamedIndividual IRI="#Montrachet_Grand_Cru"/>
+        <NamedIndividual IRI="#Fish_and_Chips"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#pairs_with"/>
+        <NamedIndividual IRI="#Montrachet_Grand_Cru"/>
+        <NamedIndividual IRI="#Fresh_Fruit_Salad"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#pairs_with"/>
+        <NamedIndividual IRI="#Montrachet_Grand_Cru"/>
+        <NamedIndividual IRI="#Ratatouille"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#is_part_of"/>
+        <NamedIndividual IRI="#Piedmont"/>
+        <NamedIndividual IRI="#Italy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#is_part_of"/>
+        <NamedIndividual IRI="#Provence"/>
+        <NamedIndividual IRI="#France"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#is_part_of"/>
+        <NamedIndividual IRI="#South_Australia"/>
+        <NamedIndividual IRI="#Australia"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#comes_from"/>
+        <NamedIndividual IRI="#The_Pastoralist"/>
+        <NamedIndividual IRI="#South_Australia"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has"/>
+        <NamedIndividual IRI="#The_Pastoralist"/>
+        <NamedIndividual IRI="#Acid"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has"/>
+        <NamedIndividual IRI="#The_Pastoralist"/>
+        <NamedIndividual IRI="#Bitter"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has"/>
+        <NamedIndividual IRI="#The_Pastoralist"/>
+        <NamedIndividual IRI="#Spice"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#is_made_of"/>
+        <NamedIndividual IRI="#The_Pastoralist"/>
+        <NamedIndividual IRI="#Cabernet_Sauvignon"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#pairs_with"/>
+        <NamedIndividual IRI="#The_Pastoralist"/>
+        <NamedIndividual IRI="#Beef_Bourguignon"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#pairs_with"/>
+        <NamedIndividual IRI="#The_Pastoralist"/>
+        <NamedIndividual IRI="#Chicken_Caesar_Salad"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#pairs_with"/>
+        <NamedIndividual IRI="#The_Pastoralist"/>
+        <NamedIndividual IRI="#Fish_and_Chips"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#pairs_with"/>
+        <NamedIndividual IRI="#The_Pastoralist"/>
+        <NamedIndividual IRI="#Ratatouille"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#is_part_of"/>
+        <NamedIndividual IRI="#Tuscany"/>
+        <NamedIndividual IRI="#Italy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#is_part_of"/>
+        <NamedIndividual IRI="#Veneto"/>
+        <NamedIndividual IRI="#Italy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#comes_from"/>
+        <NamedIndividual IRI="#Whispering_Angel_Rose"/>
+        <NamedIndividual IRI="#Provence"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has"/>
+        <NamedIndividual IRI="#Whispering_Angel_Rose"/>
+        <NamedIndividual IRI="#Acid"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#is_made_of"/>
+        <NamedIndividual IRI="#Whispering_Angel_Rose"/>
+        <NamedIndividual IRI="#Cinsault"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#is_made_of"/>
+        <NamedIndividual IRI="#Whispering_Angel_Rose"/>
+        <NamedIndividual IRI="#Grenache"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#is_made_of"/>
+        <NamedIndividual IRI="#Whispering_Angel_Rose"/>
+        <NamedIndividual IRI="#Rolle"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#is_made_of"/>
+        <NamedIndividual IRI="#Whispering_Angel_Rose"/>
+        <NamedIndividual IRI="#Syrah"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#is_made_of"/>
+        <NamedIndividual IRI="#Whispering_Angel_Rose"/>
+        <NamedIndividual IRI="#Tibouren"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#pairs_with"/>
+        <NamedIndividual IRI="#Whispering_Angel_Rose"/>
+        <NamedIndividual IRI="#Beef_Bourguignon"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#pairs_with"/>
+        <NamedIndividual IRI="#Whispering_Angel_Rose"/>
+        <NamedIndividual IRI="#Chicken_Caesar_Salad"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#pairs_with"/>
+        <NamedIndividual IRI="#Whispering_Angel_Rose"/>
+        <NamedIndividual IRI="#Fish_and_Chips"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#pairs_with"/>
+        <NamedIndividual IRI="#Whispering_Angel_Rose"/>
+        <NamedIndividual IRI="#Fresh_Fruit_Salad"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#pairs_with"/>
+        <NamedIndividual IRI="#Whispering_Angel_Rose"/>
+        <NamedIndividual IRI="#Ratatouille"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#pairs_with"/>
+        <NamedIndividual IRI="#Whispering_Angel_Rose"/>
+        <NamedIndividual IRI="#Tiramisu"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#taste_name"/>
+        <NamedIndividual IRI="#Acid"/>
+        <Literal>Acid</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#country_name"/>
+        <NamedIndividual IRI="#Argentina"/>
+        <Literal>Argentina</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#country_name"/>
+        <NamedIndividual IRI="#Australia"/>
+        <Literal>Australia</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#meal_name"/>
+        <NamedIndividual IRI="#Beef_Bourguignon"/>
+        <Literal>Beef Bourguignon</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#taste_name"/>
+        <NamedIndividual IRI="#Bitter"/>
+        <Literal>Bitter</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#has_id"/>
+        <NamedIndividual IRI="#Bourgogne_Pinot_Noir"/>
+        <Literal>BPNOIR</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#wine_name"/>
+        <NamedIndividual IRI="#Bourgogne_Pinot_Noir"/>
+        <Literal>Bourgogne Pinot Noir</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#region_name"/>
+        <NamedIndividual IRI="#Burgundy"/>
+        <Literal>Burgundy</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#grape_name"/>
+        <NamedIndividual IRI="#Cabernet_Franc"/>
+        <Literal>Cabernet Franc</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#grape_name"/>
+        <NamedIndividual IRI="#Cabernet_Sauvignon"/>
+        <Literal>Cabernet Sauvignon</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#region_name"/>
+        <NamedIndividual IRI="#California"/>
+        <Literal>California</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#grape_name"/>
+        <NamedIndividual IRI="#Chardonnay"/>
+        <Literal>Chardonnay</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#meal_name"/>
+        <NamedIndividual IRI="#Chicken_Caesar_Salad"/>
+        <Literal>Chicken Caesar Salad</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#grape_name"/>
+        <NamedIndividual IRI="#Cinsault"/>
+        <Literal>Cinsault</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#has_id"/>
+        <NamedIndividual IRI="#Clos_De_Los_Siete"/>
+        <Literal>CSIETE</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#wine_name"/>
+        <NamedIndividual IRI="#Clos_De_Los_Siete"/>
+        <Literal>Clos De Los Siete</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#has_id"/>
+        <NamedIndividual IRI="#Coteau_De_Vernon"/>
+        <Literal>CVERNON</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#wine_name"/>
+        <NamedIndividual IRI="#Coteau_De_Vernon"/>
+        <Literal>Coteau De Vernon</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#meal_name"/>
+        <NamedIndividual IRI="#Fish_and_Chips"/>
+        <Literal>Fish and Chips</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#has_id"/>
+        <NamedIndividual IRI="#Fontanafredda_Moscato_Asti"/>
+        <Literal>FMOSCATO</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#wine_name"/>
+        <NamedIndividual IRI="#Fontanafredda_Moscato_Asti"/>
+        <Literal>Fontanafredda Moscato Asti</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#country_name"/>
+        <NamedIndividual IRI="#France"/>
+        <Literal>France</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#meal_name"/>
+        <NamedIndividual IRI="#Fresh_Fruit_Salad"/>
+        <Literal>Fresh Fruit Salad</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#grape_name"/>
+        <NamedIndividual IRI="#Glera"/>
+        <Literal>Glera</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#grape_name"/>
+        <NamedIndividual IRI="#Grenache"/>
+        <Literal>Grenache</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#country_name"/>
+        <NamedIndividual IRI="#Italy"/>
+        <Literal>Italy</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#grape_name"/>
+        <NamedIndividual IRI="#Malbec"/>
+        <Literal>Malbec</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#has_id"/>
+        <NamedIndividual IRI="#Malene_Rose"/>
+        <Literal>MALENE</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#wine_name"/>
+        <NamedIndividual IRI="#Malene_Rose"/>
+        <Literal>Malene Rosé</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#has_id"/>
+        <NamedIndividual IRI="#Masseto"/>
+        <Literal>MASSETO</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#wine_name"/>
+        <NamedIndividual IRI="#Masseto"/>
+        <Literal>Masseto</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#region_name"/>
+        <NamedIndividual IRI="#Mendoza"/>
+        <Literal>Mendoza</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#grape_name"/>
+        <NamedIndividual IRI="#Merlot"/>
+        <Literal>Merlot</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#has_id"/>
+        <NamedIndividual IRI="#Mionetto_Prosecco_Brut"/>
+        <Literal>MIONETTO</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#wine_name"/>
+        <NamedIndividual IRI="#Mionetto_Prosecco_Brut"/>
+        <Literal>Mionetto Prosecco Brut</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#has_id"/>
+        <NamedIndividual IRI="#Montrachet_Grand_Cru"/>
+        <Literal>GRANDCRU</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#wine_name"/>
+        <NamedIndividual IRI="#Montrachet_Grand_Cru"/>
+        <Literal>Montrachet Grand Cru</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#grape_name"/>
+        <NamedIndividual IRI="#Moscato"/>
+        <Literal>Moscato</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#grape_name"/>
+        <NamedIndividual IRI="#Petit_Verdot"/>
+        <Literal>Petit Verdot</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#region_name"/>
+        <NamedIndividual IRI="#Piedmont"/>
+        <Literal>Piedmont</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#grape_name"/>
+        <NamedIndividual IRI="#Pinot_Noir"/>
+        <Literal>Pinot Noir</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#region_name"/>
+        <NamedIndividual IRI="#Provence"/>
+        <Literal>Provence</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#meal_name"/>
+        <NamedIndividual IRI="#Ratatouille"/>
+        <Literal>Ratatouille</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#grape_name"/>
+        <NamedIndividual IRI="#Rolle"/>
+        <Literal>Rolle</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#taste_name"/>
+        <NamedIndividual IRI="#Salt"/>
+        <Literal>Salt</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#region_name"/>
+        <NamedIndividual IRI="#South_Australia"/>
+        <Literal>South Australia</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#taste_name"/>
+        <NamedIndividual IRI="#Spice"/>
+        <Literal>Spice</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#taste_name"/>
+        <NamedIndividual IRI="#Sweet"/>
+        <Literal>Sweet</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#grape_name"/>
+        <NamedIndividual IRI="#Syrah"/>
+        <Literal>Syrah</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#has_id"/>
+        <NamedIndividual IRI="#The_Pastoralist"/>
+        <Literal>PAST</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#wine_name"/>
+        <NamedIndividual IRI="#The_Pastoralist"/>
+        <Literal>The Pastoralist</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#grape_name"/>
+        <NamedIndividual IRI="#Tibouren"/>
+        <Literal>Tibouren</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#meal_name"/>
+        <NamedIndividual IRI="#Tiramisu"/>
+        <Literal>Tiramisu</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#region_name"/>
+        <NamedIndividual IRI="#Tuscany"/>
+        <Literal>Tuscany</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#country_name"/>
+        <NamedIndividual IRI="#United_States"/>
+        <Literal>United States</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#region_name"/>
+        <NamedIndividual IRI="#Veneto"/>
+        <Literal>Veneto</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#grape_name"/>
+        <NamedIndividual IRI="#Viognier"/>
+        <Literal>Viognier</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#has_id"/>
+        <NamedIndividual IRI="#Whispering_Angel_Rose"/>
+        <Literal>WHISP</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#wine_name"/>
+        <NamedIndividual IRI="#Whispering_Angel_Rose"/>
+        <Literal>Whispering Angel Rosé</Literal>
+    </DataPropertyAssertion>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#comes_from"/>
+        <Class IRI="#wine"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#has"/>
+        <Class IRI="#wine"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#is_made_of"/>
+        <Class IRI="#wine"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#is_part_of"/>
+        <Class IRI="#region"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#pairs_with"/>
+        <Class IRI="#wine"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#comes_from"/>
+        <Class IRI="#region"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#has"/>
+        <Class IRI="#taste"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#is_made_of"/>
+        <Class IRI="#grape"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#is_part_of"/>
+        <Class IRI="#country"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#pairs_with"/>
+        <Class IRI="#meal"/>
+    </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty IRI="#country_name"/>
+        <Class IRI="#country"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#grape_name"/>
+        <Class IRI="#grape"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#has_id"/>
+        <Class IRI="#wine"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#meal_name"/>
+        <Class IRI="#meal"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#region_name"/>
+        <Class IRI="#region"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#taste_name"/>
+        <Class IRI="#taste"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#wine_name"/>
+        <Class IRI="#wine"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#country_name"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#grape_name"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#has_id"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#meal_name"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#region_name"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#taste_name"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#wine_name"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi -->
+

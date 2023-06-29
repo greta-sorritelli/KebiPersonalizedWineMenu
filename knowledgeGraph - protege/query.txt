@@ -1,0 +1,141 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX wm: <http://www.semanticweb.org/greta/ontologies/2023/5/wineMenu#>
+
+
+#Select wines with a particular Grape (ex. Merlot)
+SELECT (str(?wineLabel) as ?wine)
+WHERE {
+	?x rdf:type wm:wine;
+	wm:wine_name ?wineLabel;
+	wm:is_made_of wm:Merlot.
+}
+
+
+#Select wines with a particular Grape (ex. Merlot) but excluding an other Grape (ex. Cabernet Sauvignon)
+SELECT (str(?wineLabel) as ?wine)
+WHERE {
+	?x rdf:type wm:wine;
+	wm:wine_name ?wineLabel;
+	wm:is_made_of wm:Merlot.
+	MINUS {
+	?x wm:is_made_of wm:Cabernet_Sauvignon.
+	}
+}
+
+
+#Select wines without a particular Grape (ex. Tibouren)
+SELECT (str(?wineLabel) as ?wine)
+WHERE {
+	?x rdf:type wm:wine;
+	wm:wine_name ?wineLabel;
+	MINUS {
+	?x wm:is_made_of wm:Tibouren.
+	}
+}
+
+
+#Select wines from a specific Country (ex. United States)
+SELECT (str(?wineLabel) as ?wine)
+WHERE {
+	?x rdf:type wm:wine;
+	wm:wine_name ?wineLabel;
+	wm:comes_from ?region.
+	?region wm:is_part_of wm:United_States.
+}
+
+
+#Select wines from a specific Region (ex. Burgundy)
+SELECT (str(?wineLabel) as ?wine)
+WHERE {
+	?x rdf:type wm:wine;
+	wm:wine_name ?wineLabel;
+	wm:comes_from wm:Burgundy.
+}
+
+
+#Select wines that pair with a specific Meal (ex. Fresh Fruit Salad)
+SELECT ?wine 
+WHERE {
+	?x rdf:type wm:wine;
+    	 wm:wine_name ?wineLabel;
+	 wm:pairs_with wm:Fresh_Fruit_Salad.
+    	BIND(STR(?wineLabel) AS ?wine).
+}
+
+
+#Select wines with a specific Region, Taste, Grape and without a Grape.
+SELECT ?wine 
+WHERE {
+  ?x rdf:type wm:wine ;
+     wm:wine_name ?wineLabel;
+     wm:comes_from wm:Veneto;
+     wm:has wm:Acid;
+     wm:is_made_of wm:Glera.
+	filter not exists {
+ 	?x wm:is_made_of wm:Moscato;
+	}
+    BIND(STR(?wineLabel) AS ?wine).
+}
+
+
+#Select wines with a specific Region, Taste, pair with a Meal, with a Grape and without a Grape.
+SELECT ?wine 
+WHERE {
+  ?x rdf:type wm:wine ;
+     wm:wine_name ?wineLabel;
+     wm:comes_from wm:Burgundy;
+     wm:has wm:Spice;
+     wm:pairs_with wm:Fish_and_Chips;
+     wm:is_made_of wm:Chardonnay.
+	filter not exists {
+ 	?x wm:is_made_of wm:Pinot_Noir;
+	}
+    BIND(STR(?wineLabel) AS ?wine).
+}
+
+
+#Select wines with a specific Country, Taste, Grape, pairing with a Meal and without a Grape.
+SELECT ?wine 
+WHERE {
+  	?x rdf:type wm:wine;
+    	 wm:wine_name ?wineLabel;
+    	 wm:comes_from ?region;
+    	 wm:has wm:Acid;
+	 wm:is_made_of wm:Chardonnay;
+	 wm:pairs_with wm:Ratatouille.
+     	?region wm:is_part_of wm:France.
+	filter not exists {
+ 	?x wm:is_made_of wm:Viognier;
+	}
+    BIND(STR(?wineLabel) AS ?wine).
+}
+
+
+#Select all wines (View all characteristics for each)
+SELECT ?wine ?region ?country (GROUP_CONCAT(DISTINCT ?gra; separator=", ") AS ?grapes) (GROUP_CONCAT(DISTINCT ?tas; separator=", ") AS ?tastes)
+WHERE {
+  ?x rdf:type wm:wine;
+     wm:wine_name ?wineLabel;
+     wm:comes_from ?reg;
+     wm:has ?ta;
+     wm:is_made_of ?gr.
+
+  ?reg wm:is_part_of ?co.
+  ?co wm:country_name ?countryLabel.
+  ?reg wm:region_name ?regionLabel.
+  ?gr wm:grape_name ?grapeLabel.
+  ?ta wm:taste_name ?tasteLabel.
+
+  BIND(STR(?wineLabel) AS ?wine).
+  BIND(STR(?regionLabel) AS ?region).
+  BIND(STR(?countryLabel) AS ?country).
+  BIND(STR(?grapeLabel) AS ?gra).
+  BIND(STR(?tasteLabel) AS ?tas).
+}
+GROUP BY ?wine ?region ?country
+
+
+
